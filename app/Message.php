@@ -24,6 +24,15 @@ class Message extends Model implements AuthenticatableContract, CanResetPassword
 	 */
 	protected $fillable = array('body');
 
+	public function scopeAfterid($query, $lastId){
+		return $query->where('id', '>', $lastId);
+	}
+
+
+	public function scopeByChatroom($query, $chatRoom){
+		return $query->where('chat_room_id', $chatRoom->id);
+	}
+
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
