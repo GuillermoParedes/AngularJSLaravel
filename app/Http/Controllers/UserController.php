@@ -6,10 +6,11 @@ class UserController extends BaseController{
         $this->users = $users;
     }
 
-    public function loginKareem(){
-
+    public function loginGuillermo(){
+        Auth::loginById(1);
     }
-    public function loginMohamed(){
-        
+
+    public function loginDavid(){
+        Auth::loginById(2);
     }
 }

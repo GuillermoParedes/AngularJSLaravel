@@ -26,5 +26,7 @@ Route::get('/api/messages/{lastMessageId}/{chatRoom}', array('uses' => 'MessageC
 
 // Users api
 
-Route::get('/api/users/login/kareem', array('uses' => 'UserController@loginKareem'));
-Route::get('/api/users/login/mohamed', array('uses' => 'UserController@loginMohamed'));
+Route::get('/api/users/login/guillermo', array('uses' => 'UserController@loginGuillermo'));
+Route::get('/api/users/login/david', array('uses' => 'UserController@loginDavid'));
+
+Route::bind('chatRoom', 'ChatRoom');
